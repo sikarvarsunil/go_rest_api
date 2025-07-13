@@ -19,6 +19,14 @@ func main() {
 	//load config
 	cfg := config.MustLoad()
 	// database setup
+
+	// storage, err := sqlite.New(cfg)
+
+	// if err != nil {
+	// 	log.Fatal((err))
+	// }
+	fmt.Println("StoragePath =", cfg.StoragePath)
+	slog.Info("storage initialized", slog.String("env", cfg.Env))
 	// setup router
 	router := http.NewServeMux()
 
